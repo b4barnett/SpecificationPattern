@@ -1,4 +1,5 @@
-﻿using Barnett.Specification.Interface;
+﻿using Barnett.Specification.Core;
+using Barnett.Specification.Interface;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -12,7 +13,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( true );
             ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> XOrSpecification = null;
+            ISpecification<bool?> XOrSpecification = new XOrSpecification<bool?>( left, right );
             
             XOrSpecification.Matches( null ).Should().BeTrue();
         }
@@ -23,7 +24,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
             ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> XOrSpecification = null;
+            ISpecification<bool?> XOrSpecification = new XOrSpecification<bool?>( left, right );
             
             XOrSpecification.Matches( null ).Should().BeTrue();
         }
@@ -34,7 +35,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( true );
             ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> XOrSpecification = null;
+            ISpecification<bool?> XOrSpecification = new XOrSpecification<bool?>( left, right );
             
             XOrSpecification.Matches( null ).Should().BeTrue();
         }
@@ -45,7 +46,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
             ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> XOrSpecification = null;
+            ISpecification<bool?> XOrSpecification = new XOrSpecification<bool?>( left, right );
             
             XOrSpecification.Matches( null ).Should().BeFalse();
         }

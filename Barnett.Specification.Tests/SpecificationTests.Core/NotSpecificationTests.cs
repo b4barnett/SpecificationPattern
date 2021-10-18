@@ -1,4 +1,5 @@
-﻿using Barnett.Specification.Interface;
+﻿using Barnett.Specification.Core;
+using Barnett.Specification.Interface;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -11,7 +12,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         {
             ISpecification<bool?> spec = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> notSpec = null;
+            ISpecification<bool?> notSpec = new NotSpecification<bool?>( spec );
 
             notSpec.Matches( null ).Should().BeFalse();
         }
@@ -22,7 +23,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         {
             ISpecification<bool?> spec = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> notSpec = null;
+            ISpecification<bool?> notSpec = new NotSpecification<bool?>( spec );
 
             notSpec.Matches( null ).Should().BeFalse();
         }

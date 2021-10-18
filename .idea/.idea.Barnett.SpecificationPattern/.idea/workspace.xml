@@ -9,14 +9,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/OrSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/TestHelperMethods.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/XOrSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Barnett.Specification.Interface/ISpecificationAsync.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/AndSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Barnett.Specification.Interface/ISpecification.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/NotSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Barnett.Specification.Core/AndSpecification.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/OrSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/TestHelperMethods.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/XOrSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Core/OrSpecification.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Core/XOrSpecification.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Core/NotSpecification.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/NotSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -27,11 +30,14 @@
         <option value="$PROJECT_DIR$/Barnett.Specification.Interface/ISpecificationAsync.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/NotSpecificationtTests.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Tests/TestHelperMethods.cs" />
-        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/AndSpecificationTests.cs" />
-        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/XOrSpecificationTests.cs" />
-        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/OrSpecificationTests.cs" />
-        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/NotSpecificationTests.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Core/AndSpecification.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/AndSpecificationTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Core/XOrSpecification.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Core/OrSpecification.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Core/NotSpecification.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/NotSpecificationTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/OrSpecificationTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/XOrSpecificationTests.cs" />
       </list>
     </option>
   </component>
