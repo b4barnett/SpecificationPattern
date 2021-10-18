@@ -6,7 +6,7 @@ namespace Barnett.Specification.Core
     /// Inverse of the result of the supplied specification
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class NotSpecification<T> : ISpecification<T>
+    public class NotSpecification<T> : ISpecification<T> //TODO: Make this internal
     {
         private readonly ISpecification<T> _spec;
 

@@ -6,7 +6,7 @@ namespace Barnett.Specification.Core
     /// Specification in which two specifications are supplied, either specifications
     /// can evaluate to true for this specification to be true
     /// </summary>
-    public class OrSpecification<T> : ISpecification<T>
+    public class OrSpecification<T> : ISpecification<T> //TODO: Make this internal
     {
         private readonly ISpecification<T> _left;
         private readonly ISpecification<T> _right;
