@@ -14,7 +14,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( true );
 
             ISpecification<bool?> OrSpecification = new OrSpecification<bool?>( left, right );
-            
+
             OrSpecification.Matches( null ).Should().BeTrue();
         }
 
@@ -25,7 +25,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( true );
 
             ISpecification<bool?> OrSpecification = new OrSpecification<bool?>( left, right );
-            
+
             OrSpecification.Matches( null ).Should().BeTrue();
         }
 
@@ -36,7 +36,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
 
             ISpecification<bool?> OrSpecification = new OrSpecification<bool?>( left, right );
-            
+
             OrSpecification.Matches( null ).Should().BeTrue();
         }
 
@@ -47,15 +47,19 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
 
             ISpecification<bool?> OrSpecification = new OrSpecification<bool?>( left, right );
-            
+
             OrSpecification.Matches( null ).Should().BeFalse();
         }
 
         [Test]
         public void OrExtension_CreatesOrSpecification()
         {
-            //force failure
-            false.Should().BeTrue();
+            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+
+            ISpecification<bool?> OrSpecification = left.Or( right );
+
+            OrSpecification.Should().BeOfType<OrSpecification<bool?>>();
         }
     }
 }

@@ -54,8 +54,12 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         [Test]
         public void XOrExtension_CreatesXOrSpecification()
         {
-            //force failure
-            false.Should().BeTrue();
+            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+
+            ISpecification<bool?> XOrSpecification = left.XOr( right );
+
+            XOrSpecification.Should().BeOfType<XOrSpecification<bool?>>();
         }
     }
 }

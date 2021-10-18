@@ -54,8 +54,12 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         [Test]
         public void AndExtension_CreatesAndSpecification()
         {
-            //force failure
-            false.Should().BeTrue();
+            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+
+            ISpecification<bool?> andSpecification = left.And( right );
+
+            andSpecification.Should().BeOfType<AndSpecification<bool?>>();
         }
     }
 }

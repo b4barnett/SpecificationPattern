@@ -21,11 +21,20 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         [Test]
         public void NotSpecification_WhenFalse_EvaluatesTrue()
         {
-            ISpecification<bool?> spec = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<bool?> spec = TestHelperMethods.SetupMockSpecification( false );
 
             ISpecification<bool?> notSpec = new NotSpecification<bool?>( spec );
 
-            notSpec.Matches( null ).Should().BeFalse();
+            notSpec.Matches( null ).Should().BeTrue();
+        }
+
+        [Test]
+        public void NotSpecificationExtension_ShouldBeNotSpecification()
+        {
+            ISpecification<bool?> spec = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<bool?> not = spec.Not();
+
+            not.Should().BeOfType<NotSpecification<bool?>>();
         }
     }
 }

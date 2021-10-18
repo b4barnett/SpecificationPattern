@@ -27,6 +27,7 @@
           </e>
         </e>
         <e p="OrSpecification.cs" t="Include" />
+        <e p="Specifications.cs" t="Include" />
         <e p="XOrSpecification.cs" t="Include" />
       </e>
       <e p="Barnett.Specification.Interface" t="IncludeRecursive">
