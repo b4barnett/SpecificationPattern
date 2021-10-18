@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barnett.Specification.Interface", "Barnett.Specification.Interface\Barnett.Specification.Interface.csproj", "{1CCEF2E5-B7BE-4941-92CF-E3828A1F5C81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barnett.Specification.Tests", "Barnett.Specification.Tests\Barnett.Specification.Tests.csproj", "{B2576AAA-DA74-4A26-8A7D-AF0E8568419D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2576AAA-DA74-4A26-8A7D-AF0E8568419D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2576AAA-DA74-4A26-8A7D-AF0E8568419D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2576AAA-DA74-4A26-8A7D-AF0E8568419D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2576AAA-DA74-4A26-8A7D-AF0E8568419D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
