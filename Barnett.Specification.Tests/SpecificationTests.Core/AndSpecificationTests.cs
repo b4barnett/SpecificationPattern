@@ -10,56 +10,56 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         [Test]
         public void AndSpecification_BothSpecificationsTrue_EvaluatesTrue()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( true );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> andSpecification = new AndSpecification<bool?>( left, right );
+            ISpecification<Unit> andSpecification = new AndSpecification<Unit>( left, right );
             
-            andSpecification.Matches( null ).Should().BeTrue();
+            andSpecification.Matches( Unit.None ).Should().BeTrue();
         }
 
         [Test]
         public void AndSpecification_OnlyLeftSpecificationTrue_EvaluatesFalse()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> andSpecification = new AndSpecification<bool?>( left, right );
+            ISpecification<Unit> andSpecification = new AndSpecification<Unit>( left, right );
             
-            andSpecification.Matches( null ).Should().BeFalse();
+            andSpecification.Matches( Unit.None ).Should().BeFalse();
         }
 
         [Test]
         public void AndSpecification_OnlyRightSpecificationTrue_EvaluatesFalse()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( true );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> andSpecification = new AndSpecification<bool?>( left, right );
+            ISpecification<Unit> andSpecification = new AndSpecification<Unit>( left, right );
             
-            andSpecification.Matches( null ).Should().BeFalse();
+            andSpecification.Matches( Unit.None ).Should().BeFalse();
         }
 
         [Test]
         public void AndSpecification_BothSpecificationFalse_EvaluatesFalse()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> andSpecification = new AndSpecification<bool?>( left, right );
+            ISpecification<Unit> andSpecification = new AndSpecification<Unit>( left, right );
             
-            andSpecification.Matches( null ).Should().BeFalse();
+            andSpecification.Matches( Unit.None ).Should().BeFalse();
         }
 
         [Test]
         public void AndExtension_CreatesAndSpecification()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> andSpecification = left.And( right );
+            ISpecification<Unit> andSpecification = left.And( right );
 
-            andSpecification.Should().BeOfType<AndSpecification<bool?>>();
+            andSpecification.Should().BeOfType<AndSpecification<Unit>>();
         }
     }
 }

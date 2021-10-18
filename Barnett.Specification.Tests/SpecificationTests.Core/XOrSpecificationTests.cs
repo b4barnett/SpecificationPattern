@@ -10,56 +10,56 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         [Test]
         public void XOrSpecification_BothSpecificationsTrue_EvaluatesFalse()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( true );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> XOrSpecification = new XOrSpecification<bool?>( left, right );
+            ISpecification<Unit> XOrSpecification = new XOrSpecification<Unit>( left, right );
             
-            XOrSpecification.Matches( null ).Should().BeTrue();
+            XOrSpecification.Matches( Unit.None ).Should().BeTrue();
         }
 
         [Test]
         public void XOrSpecification_OnlyLeftSpecificationTrue_EvaluatesTrue()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> XOrSpecification = new XOrSpecification<bool?>( left, right );
+            ISpecification<Unit> XOrSpecification = new XOrSpecification<Unit>( left, right );
             
-            XOrSpecification.Matches( null ).Should().BeTrue();
+            XOrSpecification.Matches( Unit.None ).Should().BeTrue();
         }
 
         [Test]
         public void XOrSpecification_OnlyRightSpecificationTrue_EvaluatesTrue()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( true );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> XOrSpecification = new XOrSpecification<bool?>( left, right );
+            ISpecification<Unit> XOrSpecification = new XOrSpecification<Unit>( left, right );
             
-            XOrSpecification.Matches( null ).Should().BeTrue();
+            XOrSpecification.Matches( Unit.None ).Should().BeTrue();
         }
 
         [Test]
         public void XOrSpecification_BothSpecificationFalse_EvaluatesTrue()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> XOrSpecification = new XOrSpecification<bool?>( left, right );
+            ISpecification<Unit> XOrSpecification = new XOrSpecification<Unit>( left, right );
             
-            XOrSpecification.Matches( null ).Should().BeFalse();
+            XOrSpecification.Matches( Unit.None ).Should().BeFalse();
         }
 
         [Test]
         public void XOrExtension_CreatesXOrSpecification()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> XOrSpecification = left.XOr( right );
+            ISpecification<Unit> XOrSpecification = left.XOr( right );
 
-            XOrSpecification.Should().BeOfType<XOrSpecification<bool?>>();
+            XOrSpecification.Should().BeOfType<XOrSpecification<Unit>>();
         }
     }
 }

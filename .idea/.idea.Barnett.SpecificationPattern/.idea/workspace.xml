@@ -13,6 +13,7 @@
     <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/AndSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Barnett.Specification.Interface/ISpecification.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Barnett.Specification.Core/AndSpecification.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/Unit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/OrSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/TestHelperMethods.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/XOrSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
@@ -32,18 +33,20 @@
         <option value="$PROJECT_DIR$/Barnett.Specification.Interface/ISpecification.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Interface/ISpecificationAsync.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/NotSpecificationtTests.cs" />
-        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/TestHelperMethods.cs" />
-        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/AndSpecificationTests.cs" />
-        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/NotSpecificationTests.cs" />
-        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/OrSpecificationTests.cs" />
-        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/XOrSpecificationTests.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Core/AndSpecification.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Core/ExceptIfSpecification.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Core/NotSpecification.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Core/OrSpecification.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Core/Specifications.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Core/XOrSpecification.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/Blank.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/TestHelperMethods.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/AndSpecificationTests.cs" />
         <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/ExceptIfSpecificationTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/NotSpecificationTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/OrSpecificationTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/XOrSpecificationTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/Unit.cs" />
       </list>
     </option>
   </component>

@@ -10,45 +10,45 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         [Test]
         public void ExceptSpecification_BothSpecificationsAreTrue_EvaluatesFalse()
         {
-            ISpecification<bool?> specification = TestHelperMethods.SetupMockSpecification( true );
-            ISpecification<bool?> except = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> specification = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> except = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> spec = specification.ExpectIf( except );
+            ISpecification<Unit> spec = specification.ExpectIf( except );
 
-            spec.Matches( null ).Should().BeFalse();
+            spec.Matches( Unit.None ).Should().BeFalse();
         }
         
         [Test]
         public void ExceptSpecification_FirstSpecificationIsTrue_EvaluatesTrue()
         {
-            ISpecification<bool?> specification = TestHelperMethods.SetupMockSpecification( true );
-            ISpecification<bool?> except = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> specification = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> except = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> spec = specification.ExpectIf( except );
+            ISpecification<Unit> spec = specification.ExpectIf( except );
 
-            spec.Matches( null ).Should().BeTrue();
+            spec.Matches( Unit.None ).Should().BeTrue();
         }
         
         [Test]
         public void ExceptSpecification_FirstSpecificationIsFalse_EvaluatesFalse()
         {
-            ISpecification<bool?> specification = TestHelperMethods.SetupMockSpecification( false );
-            ISpecification<bool?> except = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> specification = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> except = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> spec = specification.ExpectIf( except );
+            ISpecification<Unit> spec = specification.ExpectIf( except );
 
-            spec.Matches( null ).Should().BeFalse();
+            spec.Matches( Unit.None ).Should().BeFalse();
         }
         
         [Test]
         public void ExceptSpecification_BothSpecificationsAreFalse_EvaluatesFalse()
         {
-            ISpecification<bool?> specification = TestHelperMethods.SetupMockSpecification( false );
-            ISpecification<bool?> except = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> specification = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> except = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> spec = specification.ExpectIf( except );
+            ISpecification<Unit> spec = specification.ExpectIf( except );
 
-            spec.Matches( null ).Should().BeFalse();
+            spec.Matches( Unit.None ).Should().BeFalse();
         }
     }
 }

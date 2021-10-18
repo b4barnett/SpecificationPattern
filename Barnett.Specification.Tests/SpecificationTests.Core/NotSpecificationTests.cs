@@ -10,31 +10,31 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         [Test]
         public void NotSpecification_WhenTrue_EvaluatesFalse()
         {
-            ISpecification<bool?> spec = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> spec = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> notSpec = new NotSpecification<bool?>( spec );
+            ISpecification<Unit> notSpec = new NotSpecification<Unit>( spec );
 
-            notSpec.Matches( null ).Should().BeFalse();
+            notSpec.Matches( Unit.None ).Should().BeFalse();
         }
         
         
         [Test]
         public void NotSpecification_WhenFalse_EvaluatesTrue()
         {
-            ISpecification<bool?> spec = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> spec = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> notSpec = new NotSpecification<bool?>( spec );
+            ISpecification<Unit> notSpec = new NotSpecification<Unit>( spec );
 
-            notSpec.Matches( null ).Should().BeTrue();
+            notSpec.Matches( Unit.None ).Should().BeTrue();
         }
 
         [Test]
         public void NotSpecificationExtension_ShouldBeNotSpecification()
         {
-            ISpecification<bool?> spec = TestHelperMethods.SetupMockSpecification( true );
-            ISpecification<bool?> not = spec.Not();
+            ISpecification<Unit> spec = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> not = spec.Not();
 
-            not.Should().BeOfType<NotSpecification<bool?>>();
+            not.Should().BeOfType<NotSpecification<Unit>>();
         }
     }
 }

@@ -5,10 +5,10 @@ namespace Barnett.Specification.Tests
 {
     public static class TestHelperMethods
     {
-        public static ISpecification<bool?> SetupMockSpecification( bool toEvaluateToo )
+        public static ISpecification<Unit> SetupMockSpecification( bool toEvaluateToo )
         {
-            Mock<ISpecification<bool?>> moqSpec = new Mock<ISpecification<bool?>>();
-            moqSpec.Setup( x => x.Matches( null) ).Returns( toEvaluateToo );
+            Mock<ISpecification<Unit>> moqSpec = new Mock<ISpecification<Unit>>();
+            moqSpec.Setup( x => x.Matches( Unit.None ) ).Returns( toEvaluateToo );
             return moqSpec.Object;
         }
     }

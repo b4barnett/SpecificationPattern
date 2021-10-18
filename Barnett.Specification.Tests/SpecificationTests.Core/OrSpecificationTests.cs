@@ -10,10 +10,10 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         [Test]
         public void OrSpecification_BothSpecificationsTrue_EvaluatesTrue()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( true );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> OrSpecification = new OrSpecification<bool?>( left, right );
+            ISpecification<Unit> OrSpecification = new OrSpecification<Unit>( left, right );
 
             OrSpecification.Matches( null ).Should().BeTrue();
         }
@@ -21,10 +21,10 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         [Test]
         public void OrSpecification_OnlyLeftSpecificationTrue_EvaluatesTrue()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( true );
 
-            ISpecification<bool?> OrSpecification = new OrSpecification<bool?>( left, right );
+            ISpecification<Unit> OrSpecification = new OrSpecification<Unit>( left, right );
 
             OrSpecification.Matches( null ).Should().BeTrue();
         }
@@ -32,34 +32,34 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         [Test]
         public void OrSpecification_OnlyRightSpecificationTrue_EvaluatesTrue()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( true );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> OrSpecification = new OrSpecification<bool?>( left, right );
+            ISpecification<Unit> OrSpecification = new OrSpecification<Unit>( left, right );
 
-            OrSpecification.Matches( null ).Should().BeTrue();
+            OrSpecification.Matches( Unit.None ).Should().BeTrue();
         }
 
         [Test]
         public void OrSpecification_BothSpecificationFalse_EvaluatesFalse()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> OrSpecification = new OrSpecification<bool?>( left, right );
+            ISpecification<Unit> OrSpecification = new OrSpecification<Unit>( left, right );
 
-            OrSpecification.Matches( null ).Should().BeFalse();
+            OrSpecification.Matches( Unit.None ).Should().BeFalse();
         }
 
         [Test]
         public void OrExtension_CreatesOrSpecification()
         {
-            ISpecification<bool?> right = TestHelperMethods.SetupMockSpecification( false );
-            ISpecification<bool?> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
 
-            ISpecification<bool?> OrSpecification = left.Or( right );
+            ISpecification<Unit> OrSpecification = left.Or( right );
 
-            OrSpecification.Should().BeOfType<OrSpecification<bool?>>();
+            OrSpecification.Should().BeOfType<OrSpecification<Unit>>();
         }
     }
 }
