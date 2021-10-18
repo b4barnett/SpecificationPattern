@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73e5aad0-7e49-43ed-93ed-efe7c464b5d6" name="Default Changelist" comment="" />
@@ -7,6 +7,33 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/OrSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/TestHelperMethods.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/XOrSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Interface/ISpecificationAsync.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/AndSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Interface/ISpecification.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/NotSpecificationTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Barnett.Specification.Core/AndSpecification.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Barnett.Specification.Core/Class1.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/AndTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Interface/ISpecification.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Interface/ISpecificationAsync.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/NotSpecificationtTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/TestHelperMethods.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/AndSpecificationTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/XOrSpecificationTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/OrSpecificationTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Tests/SpecificationTests.Core/NotSpecificationTests.cs" />
+        <option value="$PROJECT_DIR$/Barnett.Specification.Core/AndSpecification.cs" />
+      </list>
+    </option>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="gOFYSxnP" />
@@ -32,7 +59,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
