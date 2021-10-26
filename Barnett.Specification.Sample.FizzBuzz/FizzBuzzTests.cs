@@ -39,9 +39,7 @@ namespace Barnett.Specification.Sample.FizzBuzz
             var fiveSpec = CreateModuloSpecification( 5, new[] { 3, 15 }, () => output.Add( "Buzz" ) );
             var fifteenSpec = CreateModuloSpecification( 15, new int[ 0 ], () => output.Add( "FizzBuzz" ) );
             var catchElse = CreateCatchAllSpecification( new[] { 3, 5, 15 }, i => output.Add( i.ToString() ) );
-
-
-            //TODO: Create specifications
+            
             FizzBuzz( insert, new[] { threeSpec, fiveSpec, fifteenSpec, catchElse } );
 
             output.Should().BeEquivalentTo( expected );
