@@ -15,7 +15,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
 
             ISpecification<Unit> OrSpecification = new OrSpecification<Unit>( left, right );
 
-            OrSpecification.Matches( null ).Should().BeTrue();
+            OrSpecification.Matches( Unit.None ).Should().BeTrue();
         }
 
         [Test]
@@ -26,7 +26,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
 
             ISpecification<Unit> OrSpecification = new OrSpecification<Unit>( left, right );
 
-            OrSpecification.Matches( null ).Should().BeTrue();
+            OrSpecification.Matches( Unit.None ).Should().BeTrue();
         }
 
         [Test]

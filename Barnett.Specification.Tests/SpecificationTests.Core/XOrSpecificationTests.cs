@@ -15,7 +15,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
 
             ISpecification<Unit> XOrSpecification = new XOrSpecification<Unit>( left, right );
             
-            XOrSpecification.Matches( Unit.None ).Should().BeTrue();
+            XOrSpecification.Matches( Unit.None ).Should().BeFalse();
         }
 
         [Test]
