@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barnett.Specification.Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barnett.Specification.Core", "Barnett.Specification.Core\Barnett.Specification.Core.csproj", "{4919D15B-2FD2-44B8-B3AF-44E3C0A0A346}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{45BD0997-9E99-4DF8-B368-D862EC5DA488}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barnett.Specification.Sample.FizzBuzz", "Barnett.Specification.Sample.FizzBuzz\Barnett.Specification.Sample.FizzBuzz.csproj", "{BC8ADF81-A678-4011-BD48-8D213F94BB75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,5 +24,12 @@ Global
 		{4919D15B-2FD2-44B8-B3AF-44E3C0A0A346}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4919D15B-2FD2-44B8-B3AF-44E3C0A0A346}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4919D15B-2FD2-44B8-B3AF-44E3C0A0A346}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC8ADF81-A678-4011-BD48-8D213F94BB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC8ADF81-A678-4011-BD48-8D213F94BB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC8ADF81-A678-4011-BD48-8D213F94BB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC8ADF81-A678-4011-BD48-8D213F94BB75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC8ADF81-A678-4011-BD48-8D213F94BB75} = {45BD0997-9E99-4DF8-B368-D862EC5DA488}
 	EndGlobalSection
 EndGlobal
