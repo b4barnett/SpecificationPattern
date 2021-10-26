@@ -88,3 +88,6 @@ ipch/
 *.sap
 
 # TFS 2012 Local Work
+
+#Rider settings
+.idea/
