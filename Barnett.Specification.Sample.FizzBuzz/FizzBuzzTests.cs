@@ -57,7 +57,7 @@ namespace Barnett.Specification.Sample.FizzBuzz
 
         private ActionSpecification<int> CreateCatchAllSpecification( int[] except, Action<int> action )
         {
-            var specification = new AlwaysTrueSpecification();
+            var specification = new AlwaysTrueSpecification<int>();
             var doNotTargetSpecifications = except.Select( x => new ModuloIsZeroSpecification( x ) );
 
             return specification.ExceptIfAny( doNotTargetSpecifications ).Do( action );
