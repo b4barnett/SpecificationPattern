@@ -24,9 +24,11 @@ namespace Barnett.Specification.Core
 
         public static ISpecification<T> ExceptIfAny<T>( this ISpecification<T> spec,
             IEnumerable<ISpecification<T>> specifications ) =>
-            spec.ExpectIf( specifications.Aggregate( (ISpecification<T>) new AlwaysFalseSpecification<T>(),
+            spec.ExpectIf( specifications.Aggregate( ( (ISpecification<T>)new AlwaysFalseSpecification<T>() ),
                 ( specification, specification1 ) => specification.Or( specification1 ) ) );
 
-        public static ISpecification<T> AndAll<T>(this ISpecification<T> left, IEnumerable<ISpecification<T>> rightSpecifications) => throw new NotImplementedException("AndAll Specification not yet satisfied");
+        public static ISpecification<T> AndAll<T>( this ISpecification<T> left, IEnumerable<ISpecification<T>> rightSpecifications ) =>
+            left.And( rightSpecifications.Aggregate( ( (ISpecification<T>)new AlwaysTrueSpecification<T>() ), 
+                ( spec, rightSpec ) => spec.And( rightSpec ) ) );
     }
 }
