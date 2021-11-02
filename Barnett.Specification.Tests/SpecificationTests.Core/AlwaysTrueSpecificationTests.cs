@@ -11,5 +11,11 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         {
             ( new AlwaysTrueSpecification<Unit>() ).Matches( Unit.None ).Should().BeTrue();
         }
+
+        [Test]
+        public void TrueBooleanToSpecification_ShouldBe_AlwaysTrueSpecification()
+        {
+            true.ToSpecification<Unit>().Should().BeOfType<AlwaysTrueSpecification<Unit>>();
+        }
     }
 }

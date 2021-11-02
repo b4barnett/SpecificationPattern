@@ -36,5 +36,16 @@ namespace Barnett.Specification.Core
             IEnumerable<ISpecification<T>> rightSpecification ) =>
             left.Or( rightSpecification.Aggregate( (ISpecification<T>)new AlwaysFalseSpecification<T>(), 
                 ( spec, rightSpec ) => spec.Or( rightSpec ) ) );
+
+
+        /// <summary>
+        /// Will evalute to a specification that will always resolve to the give boolean state of <see cref="state"/>
+        /// </summary>
+        /// <typeparam name="T">The type for the specification to accept</typeparam>
+        /// <param name="state">The value the specification should evalute to</param>
+        /// <returns>Specification that resolves to the given value of <see cref="state"/></returns>
+        /// <remarks>Although not particular useful on its own, this extension makes working in a more functional work like 
+        /// when using <see cref="System.Linq.Enumerable.Aggregate{TSource}(IEnumerable{TSource}, Func{TSource, TSource, TSource})"/> easier</remarks>
+        public static ISpecification<T> ToSpecification<T>( this bool state ) => state ? (ISpecification<T>)new AlwaysTrueSpecification<T>() : new AlwaysFalseSpecification<T>();
     }
 }
