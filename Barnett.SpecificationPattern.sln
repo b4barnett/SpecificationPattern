@@ -1,14 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barnett.Specification.Interface", "Barnett.Specification.Interface\Barnett.Specification.Interface.csproj", "{1CCEF2E5-B7BE-4941-92CF-E3828A1F5C81}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31825.309
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Barnett.Specification.Interface", "Barnett.Specification.Interface\Barnett.Specification.Interface.csproj", "{1CCEF2E5-B7BE-4941-92CF-E3828A1F5C81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barnett.Specification.Tests", "Barnett.Specification.Tests\Barnett.Specification.Tests.csproj", "{B2576AAA-DA74-4A26-8A7D-AF0E8568419D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Barnett.Specification.Tests", "Barnett.Specification.Tests\Barnett.Specification.Tests.csproj", "{B2576AAA-DA74-4A26-8A7D-AF0E8568419D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barnett.Specification.Core", "Barnett.Specification.Core\Barnett.Specification.Core.csproj", "{4919D15B-2FD2-44B8-B3AF-44E3C0A0A346}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Barnett.Specification.Core", "Barnett.Specification.Core\Barnett.Specification.Core.csproj", "{4919D15B-2FD2-44B8-B3AF-44E3C0A0A346}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{45BD0997-9E99-4DF8-B368-D862EC5DA488}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barnett.Specification.Sample.FizzBuzz", "Barnett.Specification.Sample.FizzBuzz\Barnett.Specification.Sample.FizzBuzz.csproj", "{BC8ADF81-A678-4011-BD48-8D213F94BB75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Barnett.Specification.Sample.FizzBuzz", "Barnett.Specification.Sample.FizzBuzz\Barnett.Specification.Sample.FizzBuzz.csproj", "{BC8ADF81-A678-4011-BD48-8D213F94BB75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,6 +19,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CCEF2E5-B7BE-4941-92CF-E3828A1F5C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CCEF2E5-B7BE-4941-92CF-E3828A1F5C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CCEF2E5-B7BE-4941-92CF-E3828A1F5C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CCEF2E5-B7BE-4941-92CF-E3828A1F5C81}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B2576AAA-DA74-4A26-8A7D-AF0E8568419D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B2576AAA-DA74-4A26-8A7D-AF0E8568419D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2576AAA-DA74-4A26-8A7D-AF0E8568419D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,7 +36,13 @@ Global
 		{BC8ADF81-A678-4011-BD48-8D213F94BB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC8ADF81-A678-4011-BD48-8D213F94BB75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BC8ADF81-A678-4011-BD48-8D213F94BB75} = {45BD0997-9E99-4DF8-B368-D862EC5DA488}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1EA00BB-F41F-4086-920E-D1C92D579DEB}
 	EndGlobalSection
 EndGlobal

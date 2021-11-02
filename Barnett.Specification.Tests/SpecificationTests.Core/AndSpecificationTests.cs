@@ -7,6 +7,8 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
 {
     public class AndTests
     {
+        #region And specification
+
         [Test]
         public void AndSpecification_BothSpecificationsTrue_EvaluatesTrue()
         {
@@ -14,7 +16,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( true );
 
             ISpecification<Unit> andSpecification = new AndSpecification<Unit>( left, right );
-            
+
             andSpecification.Matches( Unit.None ).Should().BeTrue();
         }
 
@@ -25,7 +27,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( true );
 
             ISpecification<Unit> andSpecification = new AndSpecification<Unit>( left, right );
-            
+
             andSpecification.Matches( Unit.None ).Should().BeFalse();
         }
 
@@ -36,7 +38,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
 
             ISpecification<Unit> andSpecification = new AndSpecification<Unit>( left, right );
-            
+
             andSpecification.Matches( Unit.None ).Should().BeFalse();
         }
 
@@ -47,7 +49,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
             ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
 
             ISpecification<Unit> andSpecification = new AndSpecification<Unit>( left, right );
-            
+
             andSpecification.Matches( Unit.None ).Should().BeFalse();
         }
 
@@ -61,5 +63,84 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
 
             andSpecification.Should().BeOfType<AndSpecification<Unit>>();
         }
+
+        #endregion
+
+        #region AndAll Specification Extension
+
+        [Test]
+        public void AndAllSpecification_SpecificationsTrue_EvaluatesTrue()
+        {
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> right2 = TestHelperMethods.SetupMockSpecification( true );
+
+            ISpecification<Unit> andSpecification = left.AndAll( new[] { right, right2 } );
+
+            andSpecification.Matches( Unit.None ).Should().BeTrue();
+        }
+
+        [Test]
+        public void AndAllSpecification_OnlyLeftSpecificationTrue_EvaluatesFalse()
+        {
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> right2 = TestHelperMethods.SetupMockSpecification( false );
+
+            ISpecification<Unit> andSpecification = left.AndAll( new[] { right, right2 } );
+
+            andSpecification.Matches( Unit.None ).Should().BeFalse();
+        }
+
+        [Test]
+        public void AndAllSpecification_OnlyRight1SpecificationTrue_EvaluatesFalse()
+        {
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right2 = TestHelperMethods.SetupMockSpecification( false );
+
+            ISpecification<Unit> andSpecification = left.AndAll( new[] { right, right2 } );
+
+            andSpecification.Matches( Unit.None ).Should().BeFalse();
+        }
+
+        [Test]
+        public void AndAllSpecification_OnlyRight2SpecificationTrue_EvaluatesFalse()
+        {
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right2 = TestHelperMethods.SetupMockSpecification( true );
+
+            ISpecification<Unit> andSpecification = left.AndAll( new[] { right, right2 } );
+
+            andSpecification.Matches( Unit.None ).Should().BeFalse();
+        }
+
+        [Test]
+        public void AndAllSpecification_AllRightSpecificationsTrue_EvaluatesFalse()
+        {
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( true );
+            ISpecification<Unit> right2 = TestHelperMethods.SetupMockSpecification( true );
+
+            ISpecification<Unit> andSpecification = left.AndAll( new[] { right, right2 } );
+
+            andSpecification.Matches( Unit.None ).Should().BeFalse();
+        }
+
+
+        [Test]
+        public void AndAllExtension_CreatesAndSpecification()
+        {
+            ISpecification<Unit> right = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> left = TestHelperMethods.SetupMockSpecification( false );
+            ISpecification<Unit> right2 = TestHelperMethods.SetupMockSpecification( false );
+
+            ISpecification<Unit> andSpecification = left.AndAll( new[] { right, right2 } );
+
+            andSpecification.Should().BeOfType<AndSpecification<Unit>>();
+        }
+
+        #endregion
     }
 }

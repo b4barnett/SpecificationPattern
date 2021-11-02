@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Barnett.Specification.Interface;
 
@@ -25,5 +26,7 @@ namespace Barnett.Specification.Core
             IEnumerable<ISpecification<T>> specifications ) =>
             spec.ExpectIf( specifications.Aggregate( (ISpecification<T>) new AlwaysFalseSpecification<T>(),
                 ( specification, specification1 ) => specification.Or( specification1 ) ) );
+
+        public static ISpecification<T> AndAll<T>(this ISpecification<T> left, IEnumerable<ISpecification<T>> rightSpecifications) => throw new NotImplementedException("AndAll Specification not yet satisfied");
     }
 }
