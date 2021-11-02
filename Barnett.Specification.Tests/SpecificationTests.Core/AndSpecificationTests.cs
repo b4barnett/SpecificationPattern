@@ -142,5 +142,7 @@ namespace Barnett.Specification.Tests.SpecificationTests.Core
         }
 
         #endregion
+
+
     }
 }

@@ -35,6 +35,10 @@ namespace Barnett.Specification.Core
             IEnumerable<ISpecification<T>> rightSpecification ) =>
             left.CompositeSpecification<T>( false, Or, Or, rightSpecification );
 
+        public static ISpecification<T> All<T>( this IEnumerable<ISpecification<T>> specifications ) =>
+            true.ToSpecification<T>().CompositeSpecification( true, And, And, specifications );
+        
+
         private static ISpecification<T> CompositeSpecification<T>( this ISpecification<T> left,
                                                                      bool initialStateForRightAggregate,
                                                                      Func<ISpecification<T>, ISpecification<T>, ISpecification<T>> leftRightCombineFunction,
