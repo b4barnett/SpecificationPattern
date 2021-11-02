@@ -23,20 +23,24 @@ namespace Barnett.Specification.Core
             new ExceptIfSpecification<T>( spec, except );
 
         public static ISpecification<T> ExceptIfAny<T>( this ISpecification<T> spec,
-            IEnumerable<ISpecification<T>> specifications ) =>
-            spec.ExpectIf( specifications.Aggregate( ( (ISpecification<T>)new AlwaysFalseSpecification<T>() ),
-                ( specification, specification1 ) => specification.Or( specification1 ) ) );
+    IEnumerable<ISpecification<T>> specifications ) =>
+            spec.CompositeSpecification<T>( false, ExpectIf, Or, specifications );
 
-        public static ISpecification<T> AndAll<T>( this ISpecification<T> left, 
+        public static ISpecification<T> AndAll<T>( this ISpecification<T> left,
             IEnumerable<ISpecification<T>> rightSpecifications ) =>
-            left.And( rightSpecifications.Aggregate( ( (ISpecification<T>)new AlwaysTrueSpecification<T>() ), 
-                ( spec, rightSpec ) => spec.And( rightSpec ) ) );
+            left.CompositeSpecification<T>( true, And, And, rightSpecifications );
 
-        public static ISpecification<T> OrAny<T>( this ISpecification<T> left, 
+
+        public static ISpecification<T> OrAny<T>( this ISpecification<T> left,
             IEnumerable<ISpecification<T>> rightSpecification ) =>
-            left.Or( rightSpecification.Aggregate( (ISpecification<T>)new AlwaysFalseSpecification<T>(), 
-                ( spec, rightSpec ) => spec.Or( rightSpec ) ) );
+            left.CompositeSpecification<T>( false, Or, Or, rightSpecification );
 
+        private static ISpecification<T> CompositeSpecification<T>( this ISpecification<T> left,
+                                                                     bool initialStateForRightAggregate,
+                                                                     Func<ISpecification<T>, ISpecification<T>, ISpecification<T>> leftRightCombineFunction,
+                                                                     Func<ISpecification<T>, ISpecification<T>, ISpecification<T>> rightAggregateFunction,
+                                                                     IEnumerable<ISpecification<T>> rightSpecification ) =>
+            leftRightCombineFunction( left, rightSpecification.Aggregate( initialStateForRightAggregate.ToSpecification<T>(), rightAggregateFunction ) );
 
         /// <summary>
         /// Will evalute to a specification that will always resolve to the give boolean state of <see cref="state"/>
