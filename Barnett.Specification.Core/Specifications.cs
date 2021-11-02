@@ -27,8 +27,14 @@ namespace Barnett.Specification.Core
             spec.ExpectIf( specifications.Aggregate( ( (ISpecification<T>)new AlwaysFalseSpecification<T>() ),
                 ( specification, specification1 ) => specification.Or( specification1 ) ) );
 
-        public static ISpecification<T> AndAll<T>( this ISpecification<T> left, IEnumerable<ISpecification<T>> rightSpecifications ) =>
+        public static ISpecification<T> AndAll<T>( this ISpecification<T> left, 
+            IEnumerable<ISpecification<T>> rightSpecifications ) =>
             left.And( rightSpecifications.Aggregate( ( (ISpecification<T>)new AlwaysTrueSpecification<T>() ), 
                 ( spec, rightSpec ) => spec.And( rightSpec ) ) );
+
+        public static ISpecification<T> OrAny<T>( this ISpecification<T> left, 
+            IEnumerable<ISpecification<T>> rightSpecification ) =>
+            left.Or( rightSpecification.Aggregate( (ISpecification<T>)new AlwaysFalseSpecification<T>(), 
+                ( spec, rightSpec ) => spec.Or( rightSpec ) ) );
     }
 }
